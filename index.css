@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container1{
+    width: 25%;
+    height: 25%;
+    margin: auto;
+    margin-top: 25px;
+    border: 1px solid brown;
+}
+
+.passGenerator{
+    margin: 15px 25px;
+}
+
+.myH3{
+    color: brown;
+}
+
+.gen{
+    color: black;
+}
+
+.line{
+    width: 100%;
+    height: 10px;
+    background-color: brown;
+}
+
+.header{
+    margin: 15px 25px;
+
+}
+
+.inpAndIcons{
+    margin: 15px 25px;
+}
+
+.inpAndIcons input{
+    font-size: 18px;
+}
+
+i{
+    padding: 5px;
+    cursor: pointer;
+}
+.myRange{
+    margin: 15px 25px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 52%;
+    height: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: brown;
+    cursor: pointer;
+  }
+  
+
+.passLength{
+    margin: 15px 25px;
+    font-weight: bold;
+}
+
+.formControl{
+    margin: 15px 25px;
+    cursor: pointer;
+}
+
+
+.container {
+    
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    pad: 5px;
+    cursor: pointer;
+    font-size: 22px;
+
+  }
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+  }
+
+  .container input ~.checkmark {
+    background-color: brown;
+    
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    
+  }
+
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+  }
+
+.footer{
+    width: 100%;
+    height: 50px;
+    background: brown;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
