@@ -25,19 +25,7 @@ function getLowercase() {
     return symbol[Math.floor(Math.random() * symbol.length)];  
    }  
   
-   function generatePassword() {  
-    passLength.innerHTML = lenEl.value
-    lenEl.oninput = () =>{
-     passLength.innerHTML = lenEl.value
-    }
-    const len = passLength.value;  
-    let password = "";  
-    for (let i = 0; i < len; i++) {  
-     const x = generateX();  
-     password += x;  
-    }  
-    PwEl.innerText = password;  
-   }  
+  
    function generateX() {  
     const xs = [];  
     if (upperEl.checked) {  
@@ -56,12 +44,27 @@ function getLowercase() {
     return xs[Math.floor(Math.random() * xs.length)];  
    }  
 
- 
+   function generatePassword() {  
+   passLength.innerHTML = lenEl.value
+   lenEl.oninput = () =>{
+    passLength.innerHTML = lenEl.value
+  
+   }
+
+
+    const len = passLength.value;  
+    let password = "";  
+    for (let i = 0; i < lenEl.value; i++) {  
+     const x = generateX();  
+     password += x;  
+    }  
+    PwEl.value = password;  
+   } 
 
    generateEl.addEventListener('click', generatePassword);
    copyEl.addEventListener('click', ()=>{
        const textarea = document.createElement("textarea");
-       const password = PwEl.innerText;
+       const password = PwEl.value;
        if(!password){
            return;
        }
