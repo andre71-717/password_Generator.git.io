@@ -44,13 +44,16 @@ function getLowercase() {
     return xs[Math.floor(Math.random() * xs.length)];  
    }  
 
-   function generatePassword() {  
    passLength.innerHTML = lenEl.value
+
+
    lenEl.oninput = () =>{
+
     passLength.innerHTML = lenEl.value
   
    }
 
+   function generatePassword() {  
 
     
     let password = "";  
