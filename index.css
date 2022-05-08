@@ -5,11 +5,17 @@
 }
 
 .container1{
-    width: 25%;
-    height: 25%;
+    width: 100%;
+    height: auto;
     margin: auto;
     margin-top: 25px;
-    border: 1px solid brown;
+}
+
+.container2{
+ width: 25%;
+ margin: auto;
+ border: 1px solid brown;
+
 }
 
 .passGenerator{
@@ -37,10 +43,7 @@
 
 .inpAndIcons{
     margin: 15px 25px;
-}
-
-.inpAndIcons input{
-    font-size: 18px;
+    display: flex;
 }
 
 i{
@@ -145,6 +148,59 @@ i{
     color: white;
     font-size: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0 7px;
+}
+
+@media(max-width: 1450px){
+  .container{
+    font-size: 17px;
+    
+  }
+}
+
+@media(max-width: 1200px){
+  .container{
+    font-size: 13px;
+    
+  }
+}
+
+@media(max-width: 1000px){
+  .container{
+    font-size: 9px;
+    
+  }
+}
+
+
+@media(max-width: 1150px){
+  .passGenerator{
+    text-align: center;
+  }
+  .header{
+    text-align: center;
+  }
+}
+
+@media(max-width: 1030px){
+  #pwHere{
+    font-size: 12px;
+  }
+}
+
+
+@media(max-width: 950px){
+  #pwHere{
+    font-size: 8px;
+  }
+}
+
+@media(max-width: 750px){
+  #pwHere{
+    font-size: 3px;
+  }
 }
