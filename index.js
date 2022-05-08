@@ -28,16 +28,16 @@ function getLowercase() {
   
    function generateX() {  
     const xs = [];  
-    if (upperEl.checked) {  
+    if (!upperEl.checked) {  
      xs.push(getUppercase());  
     }  
-    if (lowerEl.checked) {  
+    if (!lowerEl.checked) {  
      xs.push(getLowercase());  
     }  
-    if (numberEl.checked) {  
+    if (!numberEl.checked) {  
      xs.push(getNumber());  
     }  
-    if (symbolEl.checked) {  
+    if (!symbolEl.checked) {  
      xs.push(getSymbol());  
     }  
     if (xs.length === 0) return "";  
@@ -52,7 +52,7 @@ function getLowercase() {
    }
 
 
-    const len = passLength.value;  
+    
     let password = "";  
     for (let i = 0; i < lenEl.value; i++) {  
      const x = generateX();  
