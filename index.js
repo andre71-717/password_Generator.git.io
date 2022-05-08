@@ -1,6 +1,7 @@
 let PwEl = document.getElementById("pwHere");  
 let copyEl = document.getElementById("copy");  
-let lenEl = document.getElementById("myRange");  
+let lenEl = document.getElementById("myRange"); 
+let passLength = document.querySelector("#passLength1>span") 
 let upperEl = document.getElementById("upper");  
 let lowerEl = document.getElementById("lower");  
 let symbolEl = document.getElementById("symbol");  
@@ -23,8 +24,13 @@ function getLowercase() {
    function getSymbol() {  
     return symbol[Math.floor(Math.random() * symbol.length)];  
    }  
+  
    function generatePassword() {  
-    const len = lenEl.value;  
+    passLength.innerHTML = lenEl.value
+    lenEl.oninput = () =>{
+     passLength.innerHTML = lenEl.value
+    }
+    const len = passLength.value;  
     let password = "";  
     for (let i = 0; i < len; i++) {  
      const x = generateX();  
@@ -49,4 +55,21 @@ function getLowercase() {
     if (xs.length === 0) return "";  
     return xs[Math.floor(Math.random() * xs.length)];  
    }  
+
+ 
+
+   generateEl.addEventListener('click', generatePassword);
+   copyEl.addEventListener('click', ()=>{
+       const textarea = document.createElement("textarea");
+       const password = PwEl.innerText;
+       if(!password){
+           return;
+       }
+       textarea.value = password;
+       document.body.appendChild(textarea);
+       textarea.select();
+       document.execCommand('copy');
+       textarea.remove();
+       alert("password copied to clipboard")
+   });
 
